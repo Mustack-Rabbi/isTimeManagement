@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:is_time_management/Screens/utils/all_list.dart';
 
 import '../../helpers/constants/constants.dart';
@@ -8,6 +9,7 @@ class Listbox extends StatelessWidget {
   final Function(BuildContext,int) showdialog;
   final Function(int,int) removeList;
   final int boxnumber;
+  final double listViewHeight;
   final List<String> list;
   final String bartext;
   final Color barcolor;
@@ -15,8 +17,10 @@ class Listbox extends StatelessWidget {
   final Color buttonbacground;
 
 
+
+
   Listbox({required this.bartext, required this.barcolor,required this.countcolor,required this.buttonbacground,
-  required this.showdialog, required this.list, required this.boxnumber, required this.removeList
+  required this.showdialog, required this.list, required this.boxnumber, required this.removeList, required this.listViewHeight
   });
 
   @override
@@ -35,19 +39,23 @@ class Listbox extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(bartext,
-                  style:kTextstyle ,),
+                Expanded(
+                  flex: 1,
+                  child: Text(bartext,
+                    style:kTitleTextstyle),
+                ),
 
                 Text(list.length.toString(),style: kTextstyle.copyWith(
                   color:countcolor,
                 ), ),
+                SizedBox(width: 20),
 
                 TextButton(
 
                   onPressed: (){
                     showdialog(context,boxnumber);
                   },
-                  child: Text("+ ADD",
+                  child: Text("+",
                     style: kTextstyle.copyWith(
                         color: Color(0xff1C1B1F),
                         fontSize: 18
@@ -56,7 +64,7 @@ class Listbox extends StatelessWidget {
                   style: TextButton.styleFrom(
                     backgroundColor: buttonbacground,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(5)
+                        borderRadius: BorderRadius.circular(0)
                     ),
 
 
@@ -74,7 +82,8 @@ class Listbox extends StatelessWidget {
 
           //listview
           Container(
-            height: 180, // Adjust height as needed
+            color: buttonbacground,
+            height: listViewHeight, // Adjust height as needed
             child: ListView.builder(
               itemCount: list.length, // Replace with your data count
               itemBuilder: (context, index){
