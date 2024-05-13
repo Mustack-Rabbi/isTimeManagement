@@ -87,16 +87,22 @@ class Listbox extends StatelessWidget {
             child: ListView.builder(
               itemCount: list.length, // Replace with your data count
               itemBuilder: (context, index){
-                return  Material(
-                  elevation: 1,
+                return Container(  
+                  decoration: BoxDecoration(border: Border(bottom: BorderSide(width: 2, color: barcolor))),
+                
+                //  Material(    
+                //   elevation: 1,
 
                   child: TextButton(
+                    
                       onLongPress: (){
                         removeList(boxnumber,index);
                       },
                     onPressed: () {  },
                     child: Text(list[index]),
                     style: TextButton.styleFrom(
+                  foregroundColor: null,
+                    
                         shadowColor:Colors.red ,
                       alignment: Alignment.centerLeft,
                       // overlayColor: MaterialStateProperty.all(Colors.red),

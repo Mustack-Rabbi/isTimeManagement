@@ -108,13 +108,12 @@ class _BodyState extends State<Body> {
                   Expanded(
                     flex: 8,
                     child: Text(
-                      "পরকালে মানুষ যে বিষয়ে সবছেয়ে বেশি অনুতপ্ত হবে"
-                      " তা হলো অবসর সময়ের সদ্ব্যবহার না করা",
+                      "পরকালে মানুষ যে বিষয়ে সবছেয়ে বেশি অনুতপ্ত হবে,তা হলো অবসর সময়ের সদ্ব্যবহার না করা।",
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                   ),
                   Expanded(
-                      flex: 2,
+                      flex: 1,
                       child: IconButton(
                         onPressed: () {},
                         icon: Icon(Icons.arrow_forward),
@@ -133,7 +132,7 @@ class _BodyState extends State<Body> {
             barcolor: kImUrPrimaryColor,
             countcolor: kImUrCountTextColor,
             buttonbacground: kImUrSecounderyColor,
-            listViewHeight: 60,
+            listViewHeight: 88,
           ),
 
           Listbox(
@@ -145,7 +144,7 @@ class _BodyState extends State<Body> {
             barcolor: kImNotUrPrimaryColor,
             countcolor: kImNotUrCountTextColor,
             buttonbacground: kImNotUrSecounderyColor,
-            listViewHeight: 105,
+            listViewHeight: 155,
           ),
 
           Listbox(
@@ -157,7 +156,7 @@ class _BodyState extends State<Body> {
             barcolor: kNotImUrPrimaryColor,
             countcolor: kNotImUrCountTextColor,
             buttonbacground: kNotImUrSecounderyColor,
-            listViewHeight: 60,
+            listViewHeight: 88,
           ),
           //
           Listbox(
@@ -169,7 +168,7 @@ class _BodyState extends State<Body> {
             barcolor: kNotImNotUrPrimaryColor,
             countcolor: kNotImNotUrCountTextColor,
             buttonbacground: kNotImNotUrSecounderyColor,
-            listViewHeight: 30,
+            listViewHeight: 60,
           ),
         ],
       ),

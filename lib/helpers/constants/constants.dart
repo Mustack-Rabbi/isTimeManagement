@@ -41,7 +41,7 @@ final kHeadingTextStyle = TextStyle(
 );
 
 final kTitleTextstyle = TextStyle(
-  fontSize: 22,
+  fontSize: 18,
   color: kHeaderColor.withOpacity(0.84),
  fontWeight: FontWeight.w400,
 );
